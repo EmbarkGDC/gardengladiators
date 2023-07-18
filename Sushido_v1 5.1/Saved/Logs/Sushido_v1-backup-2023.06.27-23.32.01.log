@@ -1,4 +1,4 @@
-﻿Log file open, 05/30/23 09:44:28
+﻿Log file open, 06/27/23 16:32:00
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=0)
 LogWindows: File 'aqProf.dll' does not exist
 LogProfilingDebugging: Loading WinPixEventRuntime.dll for PIX profiling (from ../../../Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64).
@@ -6,7 +6,7 @@ LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=0)
 LogWindows: File 'VtuneApi.dll' does not exist
 LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=0)
 LogWindows: File 'VtuneApi32e.dll' does not exist
-LogWindows: Started CrashReportClient (pid=15420)
+LogWindows: Started CrashReportClient (pid=35252)
 LogWindows: Custom abort handler registered for crash reporting.
 LogInit: Display: Running engine for game: Sushido_v1
 LogCore: UnrealTraceServer: Trace store launch successful
@@ -17,28 +17,28 @@ LogCsvProfiler: Display: Metadata set : platform="Windows"
 LogCsvProfiler: Display: Metadata set : config="Development"
 LogCsvProfiler: Display: Metadata set : buildversion="++UE5+Release-5.1-CL-23901901"
 LogCsvProfiler: Display: Metadata set : engineversion="5.1.1-23901901+++UE5+Release-5.1"
-LogCsvProfiler: Display: Metadata set : commandline="" "D:/CFrancisco/Sushido_v1 5.1/Sushido_v1.uproject"""
-LogCsvProfiler: Display: Metadata set : os="Windows 10 (22H2) [10.0.19045.2965] "
-LogCsvProfiler: Display: Metadata set : cpu="AuthenticAMD|AMD Ryzen 7 5700G with Radeon Graphics"
+LogCsvProfiler: Display: Metadata set : commandline="" "G:/Unreal Projects/gardengladiators/Sushido_v1 5.1/Sushido_v1.uproject" -EpicPortal -epicusername=StephenLarsen -epicuserid=4aaca30e665740c0a645809e1c04899f -epiclocale=en -epicsandboxid=ue""
+LogCsvProfiler: Display: Metadata set : os="Windows 10 (22H2) [10.0.19045.3086] "
+LogCsvProfiler: Display: Metadata set : cpu="GenuineIntel|Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz"
 LogCsvProfiler: Display: Metadata set : pgoenabled="0"
-LogCsvProfiler: Display: Metadata set : loginid="a0b3ee8a44be5aaf1848b8a3e38a2e8c"
+LogCsvProfiler: Display: Metadata set : loginid="c1a366ee41754bdec0ff6eb5535412f1"
 LogCsvProfiler: Display: Metadata set : asan="0"
 LogCsvProfiler: Display: Metadata set : llm="0"
-LogStats: Stats thread started at 0.344084
+LogStats: Stats thread started at 0.652548
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: -8:00, Platform Override: ''
 LogInit: Session CrashGUID >====================================================
-         Session CrashGUID >   UECC-Windows-5945391E4BF8AFDE20BFF7B177F048A6
+         Session CrashGUID >   UECC-Windows-40E51ADC469E3FBA4DE169AB0B9FB325
          Session CrashGUID >====================================================
-LogConfig: Display: Loading VulkanPC ini files took 0.03 seconds
-LogConfig: Display: Loading HoloLens ini files took 0.03 seconds
-LogConfig: Display: Loading IOS ini files took 0.03 seconds
-LogConfig: Display: Loading Mac ini files took 0.03 seconds
-LogConfig: Display: Loading Android ini files took 0.03 seconds
+LogConfig: Display: Loading HoloLens ini files took 0.08 seconds
+LogConfig: Display: Loading IOS ini files took 0.04 seconds
+LogConfig: Display: Loading Linux ini files took 0.25 seconds
+LogConfig: Display: Loading Android ini files took 0.38 seconds
+LogConfig: Display: Loading Mac ini files took 0.05 seconds
+LogConfig: Display: Loading LinuxArm64 ini files took 0.09 seconds
+LogConfig: Display: Loading TVOS ini files took 0.03 seconds
 LogConfig: Display: Loading Unix ini files took 0.03 seconds
-LogConfig: Display: Loading TVOS ini files took 0.04 seconds
-LogConfig: Display: Loading Windows ini files took 0.04 seconds
-LogConfig: Display: Loading Linux ini files took 0.04 seconds
-LogConfig: Display: Loading LinuxArm64 ini files took 0.04 seconds
+LogConfig: Display: Loading VulkanPC ini files took 0.02 seconds
+LogConfig: Display: Loading Windows ini files took 0.05 seconds
 Message dialog closed, result: No, title: Missing Plugin, text: This project requires the 'PaperZD' plugin, which could not be found. Would you like to disable it and continue?
 
 If you do, you will no longer be able to open any assets created with it. If not, the application will close.
@@ -67,4 +67,4 @@ LogModuleManager: Shutting down and abandoning module StreamingFile (6)
 LogModuleManager: Shutting down and abandoning module CookOnTheFly (4)
 LogModuleManager: Shutting down and abandoning module StorageServerClient (2)
 LogExit: Exiting.
-Log file closed, 05/30/23 09:44:28
+Log file closed, 06/27/23 16:32:01
