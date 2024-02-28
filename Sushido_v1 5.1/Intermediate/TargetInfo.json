@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Sushido_v1",
+			"Path": "..\\Source\\Sushido_v1.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Sushido_v1Editor",
+			"Path": "..\\Source\\Sushido_v1Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
