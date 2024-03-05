@@ -5,6 +5,7 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+<<<<<<< Updated upstream
 				"C:/Users/Kyle Dundas/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Blades_Right/Bladez_Right_Walk.uasset",
 				"C:/Users/Kyle Dundas/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/AS_TopDownCharacter.uasset",
 				"C:/Users/Kyle Dundas/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/BP_TopDownChar.uasset",
@@ -50,6 +51,11 @@
 				"C:/Users/Kyle Dundas/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Anago_spritsheet.uasset",
 				"C:/Users/Kyle Dundas/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Suchido_Level_loader.umap",
 				"C:/Users/Kyle Dundas/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/Main_menu.umap",
+=======
+				"C:/Users/Kyle Dundas/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Bladez_walk_Anim_Fill_v5.uasset",
+				"C:/Users/Kyle Dundas/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Up/T-Red_Sprite_0.uasset",
+				"C:/Users/Kyle Dundas/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Down/T-Red_Sprite_4.uasset",
+>>>>>>> Stashed changes
 				"D:/Fae Trick/Documents/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sushi/Textures/Fish1Edge.uasset",
 				"D:/Fae Trick/Documents/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sushi/Textures/Fish1Center.uasset",
 				"D:/Fae Trick/Documents/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sushi/Textures/Fish3Center.uasset",
