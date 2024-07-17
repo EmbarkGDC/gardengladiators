@@ -5,6 +5,13 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/BP_Cut.uasset",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacterP1.uasset",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/BP_TopDownChar.uasset",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/BP_TestSushi.uasset",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Suchido_Kitchen_v3.umap",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sushi/BP_Spawner.uasset",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Structure/SushiStruc.uasset",
 				"G:/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/PickUps/Fish_mat.uasset",
 				"G:/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/PickUps/FishPickUp_BP.uasset",
 				"G:/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/lambert1.uasset",
