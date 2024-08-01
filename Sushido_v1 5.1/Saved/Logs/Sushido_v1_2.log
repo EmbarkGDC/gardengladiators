@@ -1144,3 +1144,28 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.08.01-19.57.38:975][321]LogSlate: Window 'Project Settings' being destroyed
 [2024.08.01-20.13.40:362][330]LogSlate: Window 'Message Log' being destroyed
 [2024.08.01-20.13.40:369][330]LogSlate: Window 'Message Log' being destroyed
+[2024.08.01-20.14.55:949][920]AssetReimport: New page: Outstanding source content changes 6:14:55 AM
+[2024.08.01-20.14.55:960][920]LogSlate: Took 0.003130 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.08.01-20.14.56:017][921]LogFactory: FactoryCreateFile: Texture with TextureFactory (0 0 C:/Users/jacob/OneDrive/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Maguro/Maguro_Action_Spritesheet.png)
+[2024.08.01-20.14.56:117][921]LogCore: PNG has complex alpha channel, will not fill RGB in transparent background, due to setting PNGInfill == OnlyOnBinaryTransparency
+[2024.08.01-20.14.56:269][922]LogFactory: FactoryCreateFile: Texture with TextureFactory (0 0 C:/Users/jacob/OneDrive/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Maguro/Maguro_Idle_Spritesheet.png)
+[2024.08.01-20.14.56:373][922]LogCore: PNG has complex alpha channel, will not fill RGB in transparent background, due to setting PNGInfill == OnlyOnBinaryTransparency
+[2024.08.01-20.14.56:397][922]LogTexture: Display: Building textures: /Game/MyContent/Character/Sprites/Maguro/Maguro_Idle_Spritesheet.Maguro_Idle_Spritesheet (BGRA8, 4096x2049 x1x1x1) (Required Memory Estimate: 245.515625 MB), EncodeSpeed: Fast
+[2024.08.01-20.14.56:505][923]LogFactory: FactoryCreateFile: Texture with TextureFactory (0 0 C:/Users/jacob/OneDrive/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Maguro/Maguro_Slice.png)
+[2024.08.01-20.14.56:526][923]LogCore: PNG has complex alpha channel, will not fill RGB in transparent background, due to setting PNGInfill == OnlyOnBinaryTransparency
+[2024.08.01-20.14.56:606][924]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.08.01-20.14.56:763][924]LogPackageLocalizationCache: Processed 47 localized package path(s) for 1 prioritized culture(s) in 0.059402 seconds
+[2024.08.01-20.14.56:891][924]LogSavePackage: Moving output files for package: /Game/MyContent/Character/Sprites/Maguro/Maguro_Action_Spritesheet
+[2024.08.01-20.14.56:891][924]LogSavePackage: Moving '../../../../../../Users/jacob/OneDrive/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Saved/Maguro_Action_Spritesheet500D94054E9015D97511BDAC4473D416.tmp' to '../../../../../../Users/jacob/OneDrive/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Maguro/Maguro_Action_Spritesheet.uasset'
+[2024.08.01-20.14.57:039][924]LogSavePackage: Moving output files for package: /Game/MyContent/Character/Sprites/Maguro/Maguro_Idle_Spritesheet
+[2024.08.01-20.14.57:039][924]LogSavePackage: Moving '../../../../../../Users/jacob/OneDrive/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Saved/Maguro_Idle_SpritesheetCA5C5C984BAED2F6EE7266BF45F0D902.tmp' to '../../../../../../Users/jacob/OneDrive/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Maguro/Maguro_Idle_Spritesheet.uasset'
+[2024.08.01-20.14.57:074][924]LogSavePackage: Moving output files for package: /Game/MyContent/Character/Sprites/Maguro/Maguro_Slice
+[2024.08.01-20.14.57:074][924]LogSavePackage: Moving '../../../../../../Users/jacob/OneDrive/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Saved/Maguro_Slice1842E66B418E7A97187DA9A984C0CEE6.tmp' to '../../../../../../Users/jacob/OneDrive/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sprites/Maguro/Maguro_Slice.uasset'
+[2024.08.01-20.14.57:084][924]LogFileHelpers: InternalPromptForCheckoutAndSave took 478 ms
+[2024.08.01-20.14.57:109][925]AssetCheck: New page: Asset Save: multiple assets
+[2024.08.01-20.14.57:109][925]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/MyContent/Character/Sprites/Maguro/Maguro_Action_Spritesheet.Maguro_Action_Spritesheet
+[2024.08.01-20.14.57:110][925]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/MyContent/Character/Sprites/Maguro/Maguro_Idle_Spritesheet.Maguro_Idle_Spritesheet
+[2024.08.01-20.14.57:110][925]LogContentValidation: Display: Validating /Script/Engine.Texture2D /Game/MyContent/Character/Sprites/Maguro/Maguro_Slice.Maguro_Slice
+[2024.08.01-20.15.00:408][ 59]AssetReimport: Importing new asset /Game/MyContent/Character/Sprites/Maguro/Maguro_Action_Spritesheet.
+[2024.08.01-20.15.00:408][ 59]AssetReimport: Importing new asset /Game/MyContent/Character/Sprites/Maguro/Maguro_Idle_Spritesheet.
+[2024.08.01-20.15.00:408][ 59]AssetReimport: Importing new asset /Game/MyContent/Character/Sprites/Maguro/Maguro_Slice.
