@@ -1153,3 +1153,4 @@ LogConfig: CVar [[r.Occlusion.SingleRHIThreadStall:1]] deferred - dummy variable
 [2024.09.26-22.42.31:714][328]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
 [2024.09.26-22.42.31:795][328]LogAssetEditorSubsystem: Opening Asset editor for UserDefinedStruct /Game/ThirdPerson/Blueprints/S_Player.S_Player
 [2024.09.26-22.42.33:918][567]LogSlate: Took 0.000201 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2024.09.26-22.43.44:819][158]LogDerivedDataCache: C:/Users/woohl/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:01.110 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1238 files in 2122 folders with total size 92 MiB.
