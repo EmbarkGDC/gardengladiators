@@ -5,6 +5,7 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+<<<<<<< HEAD
 				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/BP_TopDownChar_p1.uasset",
 				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Suchido_Kitchen_v3.umap",
 				"C:/Users/Evan/Documents/Unreal Projects/Sushido_v1 5.1/Content/MyContent/Suchido_Kitchen_v3.umap",
@@ -520,6 +521,12 @@
 				"C:/Users/Evan/Documents/gardengladiators/gardengladiators/Sushido_v1 5.1/Content/CartoonMaterial.uasset",
 				"C:/Users/Evan/Documents/gardengladiators/gardengladiators/Sushido_v1 5.1/Content/CartoonMaterial2.uasset",
 				"C:/Users/Evan/Documents/gardengladiators/gardengladiators/Sushido_v1 5.1/Content/MyContent/Suchido_Kitchen_v3.umap",
+=======
+				"C:/Users/Evan/Documents/Unreal Projects/gardengladiators 1-27-25 camera_system/Sushido_v1 5.1/Content/MyContent/Suchido_Kitchen_v3.umap",
+				"C:/Users/Evan/Documents/Unreal Projects/gardengladiators 1-27-25 camera_system/Sushido_v1 5.1/Content/MyContent/Character/BP_TopDownChar.uasset",
+				"C:/Users/Evan/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/BP_TopDownChar.uasset",
+				"C:/Users/Evan/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Suchido_Kitchen_v3.umap",
+>>>>>>> origin/CameraSys_Evan
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/BP_Cut.uasset",
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacterP1.uasset",
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/BP_TopDownChar.uasset",
@@ -544,6 +551,7 @@
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/BP_Squipper.uasset",
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/BP_TestSushi_Child.uasset",
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/UI/W_CountdownTimer.uasset",
+<<<<<<< HEAD
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/UI/W_Results.uasset",
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/UI/W_Score_Test.uasset",
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/DSimmons_SushidoGameAssets/BP_ThirdPersonGameMode.uasset",
@@ -580,6 +588,14 @@
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/sushicounter_L_Lid.uasset",
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/sushicounter_R_LId.uasset",
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/sushicounter_lazysusan_top.uasset",
+=======
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/ABP_TopDownChar.uasset",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/AS_TopDownCharacter.uasset",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/AnimSequences/Idle.uasset",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/AnimSequences/Walk.uasset",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/DSimmons_SushidoGameAssets/BP_ThirdPersonGameMode.uasset",
+				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/GM_Base.uasset",
+>>>>>>> origin/CameraSys_Evan
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/BP_Heilouch.uasset",
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sushi/BP_Bluna.uasset",
 				"C:/Users/woohl/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/Sushi/BP_Palgram.uasset",

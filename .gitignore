@@ -6,6 +6,10 @@
 *.lo
 *.o
 *.obj
+*.log
+
+Sushido_v1 5.1\Saved\Crashes\*
+Sushido_v1 5.1\Saved\Logs\*
 
 # Precompiled Headers
 *.gch
