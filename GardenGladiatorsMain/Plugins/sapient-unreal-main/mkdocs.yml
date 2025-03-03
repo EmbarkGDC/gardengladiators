@@ -1,0 +1,84 @@
+site_name: "Documentation"
+site_description: "Sapient Technology's Unreal Engine Documentation"
+site_author: "Sapient Technology, Inc."
+repo_url: "https://github.com/sapient-technology/unreal-playlab"
+
+
+docs_dir: docs/  # Specify the correct directory here
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Getting Started: getting-started.md
+  - Support: support.md
+  - Release Notes: release_notes.md
+theme:
+  name: material
+  # Logos
+  logo: assets/images/sapient_logo.png
+  favicon: assets/images/sapient_face.png
+  # Fonts
+  font: 
+    text: Merriweather Sans
+    code: Red Hat Mono
+  # Color Palette
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: orange
+      accent: deep purple
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: orange
+      accent: deep purple
+  # Navigation 
+  features:
+    # Footer
+    - navigation.footer
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sapient-technology/sapient-unreal
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/sapient-tech/
+      name: LinkedIn
+    - icon: fontawesome/brands/google
+      link: mailto:info@sapientstudio.com
+      name: Gmail
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/MVCvNgNQ7G
+      name: Discord
+copyright: Copyright &copy; 2024 - 2025 Sapient Technology, Inc.
+markdown_extensions:
+  # Emoji Tools & Formatting
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # Code Formatting
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  # Content Tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  # Diagrams
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
