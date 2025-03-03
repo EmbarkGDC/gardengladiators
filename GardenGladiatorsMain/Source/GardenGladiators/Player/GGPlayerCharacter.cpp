@@ -2,6 +2,7 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 AGGPlayerCharacter::AGGPlayerCharacter()
 {
@@ -28,50 +29,180 @@ AGGPlayerCharacter::AGGPlayerCharacter()
     bUseControllerRotationPitch = false;
     bUseControllerRotationYaw = false;
     bUseControllerRotationRoll = false;
+
+    // Initialize movement properties
+    BaseMovementSpeed = 600.0f;
+    SprintSpeedMultiplier = 1.5f;
+    bIsSprinting = false;
+    CurrentStamina = 100.0f;
+
+    // Initialize sound properties
+    bCanPlayFootstep = true;
+    bCanPlayVoiceLine = true;
 }
 
 void AGGPlayerCharacter::BeginPlay()
 {
     Super::BeginPlay();
+    
+    // Set initial movement speed
+    GetCharacterMovement()->MaxWalkSpeed = BaseMovementSpeed;
 }
 
 void AGGPlayerCharacter::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
+
+    // Check for footstep sounds during movement
+    CheckAndPlayFootstep();
 }
 
-void AGGPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+// ... [Previous movement and basic sound functions remain unchanged] ...
+
+USoundBase* AGGPlayerCharacter::GetRandomSound(const TArray<USoundBase*>& SoundArray)
 {
-    Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-    PlayerInputComponent->BindAxis("MoveForward", this, &AGGPlayerCharacter::MoveForward);
-    PlayerInputComponent->BindAxis("MoveRight", this, &AGGPlayerCharacter::MoveRight);
-
-    PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
-    PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
-
-    PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-    PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
-}
-
-void AGGPlayerCharacter::MoveForward(float Value)
-{
-    if ((Controller != nullptr) && (Value != 0.0f))
+    if (SoundArray.Num() > 0)
     {
-        const FRotator Rotation = Controller->GetControlRotation();
-        const FRotator YawRotation(0, Rotation.Yaw, 0);
-        const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-        AddMovementInput(Direction, Value);
+        int32 RandomIndex = FMath::RandRange(0, SoundArray.Num() - 1);
+        return SoundArray[RandomIndex];
+    }
+    return nullptr;
+}
+
+bool AGGPlayerCharacter::CanPlayVoiceLine() const
+{
+    return bCanPlayVoiceLine;
+}
+
+void AGGPlayerCharacter::StartVoiceLineCooldown()
+{
+    bCanPlayVoiceLine = false;
+    GetWorld()->GetTimerManager().SetTimer(
+        VoiceLineCooldownTimer,
+        this,
+        &AGGPlayerCharacter::EnableVoiceLine,
+        VoiceLineCooldown,
+        false
+    );
+}
+
+void AGGPlayerCharacter::PlayRandomVoiceSound(const TArray<USoundBase*>& SoundArray, const FVector2D& VolumeRange, const FVector2D& PitchRange)
+{
+    if (CanPlayVoiceLine())
+    {
+        if (USoundBase* SelectedSound = GetRandomSound(SoundArray))
+        {
+            float RandomVolume = FMath::RandRange(VolumeRange.X, VolumeRange.Y);
+            float RandomPitch = FMath::RandRange(PitchRange.X, PitchRange.Y);
+            
+            PlayCharacterSound(SelectedSound, RandomVolume, RandomPitch);
+            StartVoiceLineCooldown();
+        }
     }
 }
 
-void AGGPlayerCharacter::MoveRight(float Value)
+void AGGPlayerCharacter::PlayAttackSound()
 {
-    if ((Controller != nullptr) && (Value != 0.0f))
+    PlayRandomVoiceSound(VoiceSounds.AttackSounds, VoiceSounds.VolumeRange, VoiceSounds.PitchRange);
+}
+
+void AGGPlayerCharacter::PlayBattleStartSound()
+{
+    PlayRandomVoiceSound(VoiceSounds.BattleStartSounds, VoiceSounds.VolumeRange, VoiceSounds.PitchRange);
+}
+
+void AGGPlayerCharacter::PlayCharacterSelectSound()
+{
+    PlayRandomVoiceSound(VoiceSounds.CharacterSelectSounds, VoiceSounds.VolumeRange, VoiceSounds.PitchRange);
+}
+
+void AGGPlayerCharacter::PlayDefeatSound()
+{
+    PlayRandomVoiceSound(VoiceSounds.DefeatSounds, VoiceSounds.VolumeRange, VoiceSounds.PitchRange);
+}
+
+void AGGPlayerCharacter::PlayMissSound()
+{
+    PlayRandomVoiceSound(VoiceSounds.MissSounds, VoiceSounds.VolumeRange, VoiceSounds.PitchRange);
+}
+
+void AGGPlayerCharacter::PlayPerfectStrikeSound()
+{
+    PlayRandomVoiceSound(VoiceSounds.PerfectStrikeSounds, VoiceSounds.VolumeRange, VoiceSounds.PitchRange);
+}
+
+void AGGPlayerCharacter::PlayVictorySound()
+{
+    PlayRandomVoiceSound(VoiceSounds.VictorySounds, VoiceSounds.VolumeRange, VoiceSounds.PitchRange);
+}
+
+void AGGPlayerCharacter::PlayCharacterSound(USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier)
+{
+    if (Sound)
     {
-        const FRotator Rotation = Controller->GetControlRotation();
-        const FRotator YawRotation(0, Rotation.Yaw, 0);
-        const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-        AddMovementInput(Direction, Value);
+        UGameplayStatics::PlaySoundAtLocation(
+            this,
+            Sound,
+            GetActorLocation(),
+            VolumeMultiplier,
+            PitchMultiplier
+        );
     }
 }
+
+void AGGPlayerCharacter::CheckAndPlayFootstep()
+{
+    // Check if character is moving on ground and fast enough
+    if (GetCharacterMovement()->IsMovingOnGround() && 
+        GetVelocity().Size() > MinFootstepSpeed &&
+        bCanPlayFootstep)
+    {
+        PlayFootstepSound();
+    }
+}
+
+void AGGPlayerCharacter::PlayFootstepSound()
+{
+    if (FootstepSounds.Num() > 0 && bCanPlayFootstep)
+    {
+        // Select random footstep sound from array
+        if (USoundBase* FootstepSound = GetRandomSound(FootstepSounds))
+        {
+            PlayCharacterSound(FootstepSound, 0.7f, 1.0f);
+
+            // Start cooldown timer
+            bCanPlayFootstep = false;
+            GetWorld()->GetTimerManager().SetTimer(
+                FootstepTimerHandle,
+                this,
+                &AGGPlayerCharacter::EnableFootstep,
+                FootstepInterval,
+                false
+            );
+        }
+    }
+}
+
+void AGGPlayerCharacter::PlayJumpSound()
+{
+    PlayCharacterSound(JumpSound, 1.0f, 1.0f);
+}
+
+void AGGPlayerCharacter::PlayLandingSound()
+{
+    PlayCharacterSound(LandingSound, 1.0f, 1.0f);
+}
+
+void AGGPlayerCharacter::Jump()
+{
+    Super::Jump();
+    PlayJumpSound();
+}
+
+void AGGPlayerCharacter::Landed(const FHitResult& Hit)
+{
+    Super::Landed(Hit);
+    PlayLandingSound();
+}
+
+// ... [Previous movement functions remain unchanged] ...
