@@ -17,7 +17,12 @@
 				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/BP_TopDownChar_Sylkie.uasset",
 				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/GI_Sushido.uasset",
 				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/GM_Base.uasset",
-				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/UI/UI_CharacterSelect/W_CharacterSelectMenu.uasset"
+				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/UI/UI_CharacterSelect/W_CharacterSelectMenu.uasset",
+				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/BP_TestSushi.uasset",
+				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Objects/BP_TestCuttingBoard.uasset",
+				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/UI/W_CutMeter.uasset",
+				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/UI/Texxtures/cut_frame_UI.uasset",
+				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/UI/Texxtures/cut_pointer_UI.uasset"
 			]
 		}
 	]
