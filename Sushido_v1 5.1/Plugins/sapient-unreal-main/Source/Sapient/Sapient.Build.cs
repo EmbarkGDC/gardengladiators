@@ -9,9 +9,10 @@ public class Sapient : ModuleRules
     public Sapient(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-        
-        // Binary distribution settings
-        bUsePrecompiled = true;
+
+		// Binary distribution settings
+
+		bUsePrecompiled = true;
         bPrecompile = true;
         PrecompileForTargets = PrecompileTargetsType.Any;
         
