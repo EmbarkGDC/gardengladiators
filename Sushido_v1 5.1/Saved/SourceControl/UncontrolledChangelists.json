@@ -5,6 +5,12 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/Users/Evan/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Suchido_Kitchen_v3.umap",
+				"C:/Users/Evan/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/BP_TopDownChar_Base.uasset",
+				"C:/Users/Evan/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/BP_Dynamic_Camera.uasset",
+				"C:/Users/Evan/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/GM_Base.uasset",
+				"C:/Users/Evan/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/AS_TopDownCharacter.uasset",
+				"C:/Users/Evan/Documents/Unreal Projects/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/AnimSequences/Anago/Anago_Walk.uasset",
 				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Character/BP_TopDownChar_Anago.uasset",
 				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/BP_Dynamic_Camera.uasset",
 				"F:/Documents/GitHub/gardengladiators/Sushido_v1 5.1/Content/MyContent/Suchido_Kitchen_v3.umap",
