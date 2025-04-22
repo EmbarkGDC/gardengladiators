@@ -1,0 +1,62 @@
+name: Docs Github Pages Deploy
+
+on:
+  workflow_dispatch: # Allow manual triggers
+  push:
+    tags-ignore:
+      - '**' # Ignore any tags here
+    branches:
+      - main
+      - master
+    paths:
+      - 'docs/**'
+      - 'requirements.txt'
+      - 'mkdocs.yml'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  buildAndDeploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.pages_url }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          path: unreal-playlab  # Explicitly set the working directory
+
+      - name: Setup Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          python_version: '3.x' # Uses latest 3.x version.
+
+      - name: Install dependencies
+        run: |
+          cd unreal-playlab  # Navigate to the correct directory
+          pip install -r requirements.txt
+
+      - name: Build Docs
+        run: |
+          cd unreal-playlab  # Navigate to the correct directory
+          mkdocs build
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'unreal-playlab/site/'  # MkDocs builds to site/ by default
+
+      - name: Deploy to GitHub Pages
+        id: deployment # This is required for environment
+        uses: actions/deploy-pages@v4
