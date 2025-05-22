@@ -1,0 +1,248 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Blueprint Modifier Schema",
+    "description": "Schema for modifying Unreal Engine blueprints using the BlueprintModifierUtils",
+    "type": "object",
+    "required": [
+        "blueprintPath",
+        "graphName"
+    ],
+    "properties": {
+        "blueprintPath": {
+            "type": "string",
+            "description": "Path to the blueprint asset in the content browser (e.g. '/Game/Blueprint/Villagers/BP_Villager')"
+        },
+        "graphName": {
+            "type": "string",
+            "description": "Name of the graph to modify (e.g. function name, event graph name, etc.)"
+        },
+        "layoutAlgorithm": {
+            "type": "string",
+            "enum": [
+                "SimpleAutoArrange",
+                "HierarchicalLayout",
+                "RadialLayout",
+                "SmartSpacing"
+            ],
+            "default": "HierarchicalLayout",
+            "description": "Algorithm to use for auto-arranging nodes after modification"
+        },
+        "nodesToAdd": {
+            "type": "array",
+            "description": "Array of nodes to add to the graph",
+            "items": {
+                "type": "object",
+                "required": [
+                    "nodeId",
+                    "nodeType"
+                ],
+                "properties": {
+                    "nodeId": {
+                        "type": "string",
+                        "description": "Unique identifier for the node in this request"
+                    },
+                    "nodeType": {
+                        "type": "string",
+                        "description": "Type of node to create (e.g. 'CallFunction', 'VariableGet', 'IfThenElse', etc.)"
+                    },
+                    "position": {
+                        "type": "object",
+                        "description": "Position of the node in the graph (optional, will be auto-arranged if not specified)",
+                        "properties": {
+                            "x": {
+                                "type": "number"
+                            },
+                            "y": {
+                                "type": "number"
+                            }
+                        }
+                    },
+                    "title": {
+                        "type": "string",
+                        "description": "Display title for the node"
+                    },
+                    "comment": {
+                        "type": "string",
+                        "description": "Comment to attach to the node"
+                    },
+                    "metadata": {
+                        "type": "object",
+                        "description": "Additional metadata for configuring the node",
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "examples": [
+                            {
+                                "FunctionName": "PrintString",
+                                "ClassName": "KismetSystemLibrary",
+                                "VariableName": "MyVariable",
+                                "MacroGraph": "/Path/To/MacroLibrary",
+                                "MacroName": "MyMacro",
+                                "EventName": "MyEvent",
+                                "EventClass": "MyActor",
+                                "NumOutputPins": 3
+                            }
+                        ]
+                    },
+                    "inputPins": {
+                        "type": "object",
+                        "description": "Values for input pins on the node",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "outputPins": {
+                        "type": "object",
+                        "description": "Values for output pins on the node (rarely used)",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "nodesToRemove": {
+            "type": "array",
+            "description": "Array of node identifiers to remove from the graph",
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "string",
+                        "description": "Identifier for the node to remove (can be node name, title, or GUID)"
+                    },
+                    {
+                        "type": "object",
+                        "required": [
+                            "nodeId"
+                        ],
+                        "properties": {
+                            "nodeId": {
+                                "type": "string",
+                                "description": "Identifier for the node to remove"
+                            },
+                            "details": {
+                                "type": "object",
+                                "description": "Additional details to help identify the node",
+                                "additionalProperties": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "nodesToModify": {
+            "type": "array",
+            "description": "Array of nodes to modify in the graph",
+            "items": {
+                "type": "object",
+                "required": [
+                    "nodeId"
+                ],
+                "properties": {
+                    "nodeId": {
+                        "type": "string",
+                        "description": "Identifier for the node to modify (must exist in graph)"
+                    },
+                    "position": {
+                        "type": "object",
+                        "description": "New position for the node",
+                        "properties": {
+                            "x": {
+                                "type": "number"
+                            },
+                            "y": {
+                                "type": "number"
+                            }
+                        }
+                    },
+                    "title": {
+                        "type": "string",
+                        "description": "New title for the node"
+                    },
+                    "comment": {
+                        "type": "string",
+                        "description": "New comment for the node"
+                    },
+                    "metadata": {
+                        "type": "object",
+                        "description": "Additional metadata for reconfiguring the node",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "inputPins": {
+                        "type": "object",
+                        "description": "New values for input pins on the node",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "connectionsToAdd": {
+            "type": "array",
+            "description": "Array of connections to add between nodes",
+            "items": {
+                "type": "object",
+                "required": [
+                    "sourceNodeId",
+                    "sourcePinName",
+                    "targetNodeId",
+                    "targetPinName"
+                ],
+                "properties": {
+                    "sourceNodeId": {
+                        "type": "string",
+                        "description": "Identifier for the source node (where connection starts)"
+                    },
+                    "sourcePinName": {
+                        "type": "string",
+                        "description": "Name of the output pin on the source node"
+                    },
+                    "targetNodeId": {
+                        "type": "string",
+                        "description": "Identifier for the target node (where connection ends)"
+                    },
+                    "targetPinName": {
+                        "type": "string",
+                        "description": "Name of the input pin on the target node"
+                    }
+                }
+            }
+        },
+        "connectionsToRemove": {
+            "type": "array",
+            "description": "Array of connections to remove between nodes",
+            "items": {
+                "type": "object",
+                "required": [
+                    "sourceNodeId",
+                    "sourcePinName",
+                    "targetNodeId",
+                    "targetPinName"
+                ],
+                "properties": {
+                    "sourceNodeId": {
+                        "type": "string",
+                        "description": "Identifier for the source node (where connection starts)"
+                    },
+                    "sourcePinName": {
+                        "type": "string",
+                        "description": "Name of the output pin on the source node"
+                    },
+                    "targetNodeId": {
+                        "type": "string",
+                        "description": "Identifier for the target node (where connection ends)"
+                    },
+                    "targetPinName": {
+                        "type": "string",
+                        "description": "Name of the input pin on the target node"
+                    }
+                }
+            }
+        }
+    }
+}
