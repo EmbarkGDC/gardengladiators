@@ -1399,3 +1399,10 @@ FPackageName: Skipped package /Game/MyContent/Objects/BP_Squipper has a valid, m
 [2025.05.27-23.06.19:394][681]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.05.27-23.06.19:398][681]AssetCheck: /Game/MyContent/Suchido_Main Validating asset
 [2025.05.27-23.07.31:532][696]LogDerivedDataCache: C:/Users/Student/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2025.05.27-23.11.08:845][347]LogUdpMessaging: Warning: FUdpMessageProcessor::UpdateReassemblers Discarding 65/108 of stale message segements from Sender=10.0.1.182:53877, Sequence=0
+[2025.05.27-23.11.42:215][447]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 363.430908
+[2025.05.27-23.11.43:216][450]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.05.27-23.11.43:216][450]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 364.097687, Update Interval: 307.212738
+[2025.05.27-23.16.52:914][379]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 674.127197
+[2025.05.27-23.16.53:913][382]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.05.27-23.16.53:913][382]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 674.793823, Update Interval: 345.746643
