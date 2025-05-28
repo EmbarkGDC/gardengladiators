@@ -10,9 +10,9 @@ public class Sapient : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		// Binary distribution settings
+        // Binary distribution settings
 
-		bUsePrecompiled = true;
+        bUsePrecompiled = true;
 		bPrecompile = true;
 		PrecompileForTargets = PrecompileTargetsType.Any;
 
@@ -20,7 +20,6 @@ public class Sapient : ModuleRules
 #if UE_5_5_OR_LATER
 		UndefinedIdentifierWarningLevel = WarningLevel.Off;
 #endif
-		OptimizeCode = CodeOptimization.InShippingBuildsOnly;
 
 		PublicIncludePaths.AddRange(
 			new[]
@@ -109,8 +108,6 @@ public class Sapient : ModuleRules
 				}
 			);
 
-		// Binary distribution protection
-		bRequiresImplementModule = true;
 		PublicDefinitions.Add("SAPIENT_API=DLLEXPORT");
 
 
@@ -125,8 +122,5 @@ public class Sapient : ModuleRules
 		 * - Shipping/Release: Set to 1
 		 */
 		PublicDefinitions.Add("SAPIENT_UE_BUILD_SHIPPING=1");
-
-		// Additional compiler settings for editor plugin
-		bEnableExceptions = true;
-	}
+    }
 }
