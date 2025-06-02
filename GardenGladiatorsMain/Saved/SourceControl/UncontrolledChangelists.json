@@ -16,7 +16,6 @@
 				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/Flipbooks/Anago/Anago_slice_nX.uasset",
 				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/Flipbooks/Anago/Anago_slice_pX.uasset",
 				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/Flipbooks/Anago/Anago_walk_pX.uasset",
-				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/RAW/Anago/Anago_idleCarry_pX.uasset",
 				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/Flipbooks/Anago/Anago_grab_nX.uasset",
 				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/Flipbooks/Anago/Anago_grab_pX.uasset",
 				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/Flipbooks/Anago/Anago_hairToss_pX.uasset",
@@ -144,7 +143,10 @@
 				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/RAW/Anago/Anago_Idle_SpriteSheet_idle_98.uasset",
 				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/RAW/Anago/Anago_Idle_SpriteSheet_idle_97.uasset",
 				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/RAW/Anago/Anago_Idle_SpriteSheet_idle_85.uasset",
-				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/RAW/Anago/Anago_Idle_SpriteSheet_idle_83.uasset"
+				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/RAW/Anago/Anago_Idle_SpriteSheet_idle_83.uasset",
+				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/Flipbooks/Anago/Anago_hairToss_nX.uasset",
+				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Anago/BP_Anago_Character.uasset",
+				"G:/Unreal Projects/gardengladiators/GardenGladiatorsMain/Content/Characters/Sprites/Players/RAW/Anago/Anago_idleCarry_pX.uasset"
 			]
 		}
 	]
