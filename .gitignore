@@ -76,3 +76,4 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+/Sushido_v1 5.1/Saved/Logs
