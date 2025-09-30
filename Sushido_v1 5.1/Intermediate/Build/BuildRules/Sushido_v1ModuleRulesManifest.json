@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"F:\\Documents\\GitHub\\gardengladiators\\Sushido_v1 5.1\\Plugins\\sapient-unreal-main\\Source\\PlayLab\\Sapient.Build.cs",
+		"F:\\Documents\\GitHub\\gardengladiators\\Sushido_v1 5.1\\Plugins\\sapient-unreal-main\\Source\\Sapient\\Sapient.Build.cs",
+		"F:\\Documents\\GitHub\\gardengladiators\\Sushido_v1 5.1\\Source\\Sushido_v1.Target.cs"
+	],
+	"EngineVersion": "5.5.3"
+}
